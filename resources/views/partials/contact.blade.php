@@ -17,7 +17,8 @@
             @foreach ($kontak as $item)
                 <a href="{{ $item['url'] }}"
                    @unless (str_starts_with($item['url'], 'mailto:')) target="_blank" rel="noopener" @endunless
-                   class="block bg-white border border-slate-300 rounded-lg p-5 text-center shadow-sm hover:bg-blue-50 hover:border-blue-300 transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500">
+                   class="block bg-white border border-slate-300 rounded-lg p-5 text-center shadow-sm hover:bg-blue-50 hover:border-blue-300 transition-all 
+                   focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500">
                     <h2 class="text-lg font-semibold text-slate-900">{{ $item['nama'] }}</h2>
                     <p class="mt-1 text-sm text-slate-600 break-all">{{ $item['teks'] }}</p>
                 </a>

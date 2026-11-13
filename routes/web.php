@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Models\About;
 
 Route::get('/', function () {
     return view('partials.home', [
@@ -26,9 +27,15 @@ Route::get('/', function () {
 })->name('home');
 
 Route::get('/about', function () {
+    $about  = About::first();
+    $skills = About::pluck('skill')->toArray();
+
     return view('partials.about', [
-        'nama' => 'Intan',
-        'keahlian' => ['Tidur', 'Piano', 'Berenang', 'Photo', 'Tetap santai', 'Lari'],
+        'nama'      => $about->name ?? 'Intan',
+        'role'      => $about->role ?? 'Mahasiswa',
+        'deskripsi' => $about->description ?? 'Saya sedang belajar membuat website dengan Laravel.',
+        'keahlian'  => $skills ?: ['Tidur', 'Piano', 'Berenang'],
+        'gambar'    => $about->image ?? 'foto.png',
     ]);
 })->name('about');
 

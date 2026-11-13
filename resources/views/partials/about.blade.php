@@ -14,15 +14,14 @@
         <h1 class="text-center text-2xl sm:text-3xl font-bold text-slate-900">Tentang saya</h1>
 
         <div class="mt-8 flex flex-col md:flex-row items-center gap-6 bg-white border border-slate-300 rounded-lg p-5 sm:p-6 shadow-sm">
-            <img src="{{ asset('img/foto.png') }}" alt="Foto {{ $nama }}"
-                 class="h-48 w-48 shrink-0 rounded-lg object-cover bg-blue-100">
+            <img src="{{ asset('img/' . $gambar) }}" alt="Foto {{ $nama }}"
+                class="h-48 w-48 shrink-0 rounded-lg object-cover bg-blue-100">
 
             <div class="text-center md:text-left">
-                <p class="text-sm font-semibold text-blue-700">Mahasiswa</p>
+                <p class="text-sm font-semibold text-blue-700">{{ $role }}</p>
                 <h2 class="mt-1 text-2xl font-bold text-slate-900">{{ $nama }}</h2>
                 <p class="mt-3 text-slate-600">
-                    Saya sedang belajar membuat website dengan Laravel dan Tailwind CSS.
-                    Website ini adalah tempat saya mengumpulkan profil, hobi, dan catatan belajar.
+                 {{ $deskripsi }}
                 </p>
             </div>
         </div>
