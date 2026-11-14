@@ -17,10 +17,10 @@
             @forelse ($posts as $post)
                 <article class="bg-white border border-slate-300 rounded-lg p-5 shadow-sm">
                     <span class="rounded-full bg-blue-100 px-3 py-0.5 text-xs font-semibold text-blue-800">
-                        {{ $post['kategori'] }}
+                        {{ $post->kategori }}
                     </span>
-                    <h2 class="mt-2 text-lg font-semibold text-slate-900">{{ $post['judul'] }}</h2>
-                    <p class="mt-2 text-slate-600">{{ $post['ringkasan'] }}</p>
+                    <h2 class="mt-2 text-lg font-semibold text-slate-900">{{ $post->judul }}</h2>
+                    <p class="mt-2 text-slate-600">{{ $post->ringkasan }}</p>
                 </article>
             @empty
                 <p class="text-center text-slate-600">Belum ada tulisan.</p>

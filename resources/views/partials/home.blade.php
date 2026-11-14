@@ -34,10 +34,10 @@
         <div class="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             @foreach ($hobi as $item)
                 <div class="bg-white border border-slate-300 rounded-lg overflow-hidden shadow-sm">
-                    <img src="{{ asset('img/' . $item['gambar']) }}" alt="{{ $item['nama'] }}" class="h-40 w-full object-cover">
+                    <img src="{{ asset('img/' . $item->gambar) }}" alt="{{ $item->nama }}" class="h-40 w-full object-cover">
                     <div class="p-4">
-                        <h3 class="text-lg font-semibold text-slate-900">{{ $item['nama'] }}</h3>
-                        <p class="mt-2 text-slate-600">{{ $item['deskripsi'] }}</p>
+                        <h3 class="text-lg font-semibold text-slate-900">{{ $item->nama }}</h3>
+                        <p class="mt-2 text-slate-600">{{ $item->deskripsi }}</p>
                     </div>
                 </div>
             @endforeach

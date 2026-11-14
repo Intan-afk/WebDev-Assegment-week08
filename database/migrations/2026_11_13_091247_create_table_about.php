@@ -12,13 +12,13 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('table_about', function (Blueprint $table) {
-    $table->id();
-    $table->string('name');
-    $table->string('role')->default('Mahasiswa');
-    $table->text('description');
-    $table->string('skill');
-    $table->string('image')->nullable();
-    $table->timestamps();
+        $table->id();
+        $table->string('name');
+        $table->string('role')->default('Mahasiswa');
+        $table->text('description');
+        $table->string('skill');
+        $table->string('image')->nullable();
+        $table->timestamps();
 });
     }
 
